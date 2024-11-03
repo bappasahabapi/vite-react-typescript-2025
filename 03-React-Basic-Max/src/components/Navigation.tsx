@@ -8,8 +8,20 @@ export default function Navigation() {
       </div>
       <div>
         {" "}
-        <a style={{ color: "white" }} href="/events">
-          events
+        <a style={{ color: "lime" }} href="/props">
+         PROPS
+        </a>
+      </div>
+      <div>
+        {" "}
+        <a style={{ color: "aqua" }} href="/state">
+          STATE
+        </a>
+      </div>
+      <div>
+        {" "}
+        <a style={{ color: "orange" }} href="/events">
+          EVENTS HANDLER
         </a>
       </div>
       
