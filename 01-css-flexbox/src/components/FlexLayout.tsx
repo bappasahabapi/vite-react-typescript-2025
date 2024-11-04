@@ -1,36 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { AlignContent, AlignItems, FlexWrap, JustifyContent } from "../types";
 
-// Define the valid values for flex properties
-type JustifyContent =
-  | "flex-start"
-  | "flex-end"
-  | "center"
-  | "space-between"
-  | "space-around"
-  | "space-evenly";
-
-type FlexWrap = "nowrap" | "wrap" | "wrap-reverse";
-
-type AlignItems = "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
-
-type AlignContent =
-  | "flex-start"
-  | "flex-end"
-  | "center"
-  | "space-between"
-  | "space-around"
-  | "space-evenly"
-  | "stretch";
-
-const FlexLayout: React.FC = () => {
-  const [justifyContent, setJustifyContent] =useState<JustifyContent>("flex-start");
+const FlexLayout = () => {
+  const [justifyContent, setJustifyContent] =
+    useState<JustifyContent>("flex-start");
   const [flexWrap, setFlexWrap] = useState<FlexWrap>("wrap");
   const [alignItems, setAlignItems] = useState<AlignItems>("flex-start");
   const [alignContent, setAlignContent] = useState<AlignContent>("stretch");
 
   return (
     <div>
-           <div
+      <div
         style={{ display: "flex", gap: "2em", justifyContent: "space-between" }}
       >
         <div>
@@ -96,6 +76,7 @@ const FlexLayout: React.FC = () => {
           </select>
         </div>
       </div>
+      <br />
       <div
         className="container"
         style={{ justifyContent, flexWrap, alignItems, alignContent }}
@@ -108,8 +89,6 @@ const FlexLayout: React.FC = () => {
         <div className="indigo">Indigo</div>
         <div className="purple">Purple</div>
       </div>
-
- 
     </div>
   );
 };
