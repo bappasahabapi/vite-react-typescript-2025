@@ -20,8 +20,6 @@
 
 # Output Images
 
--    **06-Css Positioning Playground**
-![flexbox](./images/position.png)
 
 -    **01-Css Flexbox Playground**
 ![flexbox](./images/flexbox.png)
@@ -38,3 +36,8 @@
 -    **05-Stepper-jonas**
 ![output](./images/stepper.png)
 
+-    **06-Css Positioning Playground**
+![flexbox](./images/position.png)
+
+-    **06-Tasker** [live](https://improved-tasker-phi.vercel.app/)
+![flexbox](./images/tasker.png)
