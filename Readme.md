@@ -20,7 +20,10 @@
 
 # Output Images
 
--    **01-Css Flexbox**
+-    **06-Css Positioning Playground**
+![flexbox](./images/position.png)
+
+-    **01-Css Flexbox Playground**
 ![flexbox](./images/flexbox.png)
 
 -    **02-Google Map Integration Feature**
