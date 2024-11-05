@@ -80,7 +80,8 @@ const SearchTask = ({onSearch}:SearchProps) => {}
 
 - handleChange Types:
 
-    ```typescript
+```typescript
+
          const handleChange = (
         event: React.ChangeEvent<
           HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -139,13 +140,13 @@ const SearchTask = ({onSearch}:SearchProps) => {}
   };
 
 
-  <!-- Separate function to handle editing an existing task -->
+ Separate function to handle editing an existing task
   const handleAddTask = (newTask: DefaultTask) => {
     setTasks([...tasks, newTask]);
     setShowAddModal(false);
   };
 
-  <!-- Separate function to handle editing an existing task -->
+ Separate function to handle editing an existing task
   const handleUpdateTask = (updatedTask: DefaultTask) => {
     const updatedTasks = tasks.map((task) =>
       task.id === updatedTask.id ? updatedTask : task
@@ -155,10 +156,12 @@ const SearchTask = ({onSearch}:SearchProps) => {}
     setTaskToUpdate(null);
   };
         
-    ```
+```
+
 
 </details>
 
+## 
 
 
 
@@ -216,7 +219,7 @@ const SearchTask = ({onSearch}:SearchProps) => {}
 
 ![flexbox](./images/position.png)
 
--    **06-Tasker** [live](https://improved-tasker-phi.vercel.app/)
+-    **06-Tasker+Book-Search-Filter** [live](https://improved-tasker-phi.vercel.app/)
 
 <details>
   <summary>Working Functionality</summary>
