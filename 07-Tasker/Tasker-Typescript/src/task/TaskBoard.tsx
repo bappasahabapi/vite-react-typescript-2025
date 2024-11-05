@@ -115,7 +115,7 @@ const TaskBoard = () => {
 
   return (
     <div>
-      <section className="mb-40 border  border-green-600" id="tasks">
+      <section className="mb-10 border  border-green-600" id="tasks">
         <p style={{ textAlign: "center", color: "white" }}>
           Taskboard Component
         </p>
