@@ -2,6 +2,7 @@ import { TodoClass } from "./models/todo";
 import Todos from "./components/Todos";
 import NewTodo from "./components/NewTodo";
 import { useState } from "react";
+import BasicTodo from "./models/CRUD-TODO/BasicTodo";
 
 function App() {
   const defaultTodos = [
@@ -38,6 +39,11 @@ function App() {
     >
       <NewTodo onAddTodo={addTodoHandler}/>  <br />
       <Todos items={todos} onRemovedTodo={handleDeleteTodo} />
+    </div>
+    <hr />
+    <div>
+      <h1>Todo CRUD using use State</h1>
+      <BasicTodo/>
     </div>
     </>
   );

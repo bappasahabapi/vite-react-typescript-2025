@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README.md to PDF Converter</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .preview {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      background: #f9f9f9;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>README.md to PDF Converter</h1>
+<p>Paste your markdown content below:</p>
+
+<textarea id="markdown-input" placeholder="Enter your README.md content here"></textarea>
+
+<h2>Preview</h2>
+<div class="preview" id="preview"></div>
+
+<button onclick="downloadPDF()">Download as PDF</button>
+
+<script>
+  const input = document.getElementById("markdown-input");
+  const preview = document.getElementById("preview");
+
+  // Function to parse markdown to simple HTML
+  function parseMarkdown(markdown) {
+    return markdown
+      .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+      .replace(/^\- (.*$)/gim, '<li>$1</li>')
+      .replace(/^\d+\. (.*$)/gim, '<li>$1</li>')
+      .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+      .replace(/\*(.*)\*/gim, '<i>$1</i>')
+      .replace(/\n$/gim, '<br>');
+  }
+
+  // Update preview on input change
+  input.addEventListener("input", () => {
+    const markdown = input.value;
+    preview.innerHTML = parseMarkdown(markdown);
+  });
+
+  // Convert preview to PDF
+  async function downloadPDF() {
+    const { jsPDF } = window.jspdf; // Access jsPDF from the library
+    const doc = new jsPDF();
+
+    // Get the parsed markdown content as text
+    const content = preview.innerText;
+
+    // Add the content to the PDF
+    doc.text(content, 10, 10);
+
+    // Save the PDF
+    doc.save("README.pdf");
+  }
+</script>
+
+</body>
+</html>
