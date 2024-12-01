@@ -3,6 +3,9 @@ import Todos from "./components/Todos";
 import NewTodo from "./components/NewTodo";
 import { useState } from "react";
 import BasicTodo from "./models/CRUD-TODO/BasicTodo";
+import TicketBooking from "./InterviewQuestion/TicketBooking";
+import BasicTodoOne from "./models/CRUD-TODO/BasicTodoOne";
+import MainPage from "./TicketBookingQuestion/MainPage";
 
 function App() {
   const defaultTodos = [
@@ -33,6 +36,11 @@ function App() {
 
   return (
     <>
+    {/* <MainPage/> */}
+    <hr />
+    <TicketBooking/>
+
+   
     <h1>App Component</h1>
     <div
       style={{ marginTop: "2rem", flexDirection:'column' }}
@@ -43,7 +51,9 @@ function App() {
     <hr />
     <div>
       <h1>Todo CRUD using use State</h1>
-      <BasicTodo/>
+      <BasicTodo/> <hr />
+      <BasicTodoOne/>
+
     </div>
     </>
   );
