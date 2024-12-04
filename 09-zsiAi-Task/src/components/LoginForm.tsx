@@ -29,8 +29,7 @@ const LoginForm = () => {
           password,
         }
       );
-      //   console.log(response)
-      // Show response in an alert
+
       alert(
         `Login Successful!\n\nResponse:\n${JSON.stringify(
           response.data,
