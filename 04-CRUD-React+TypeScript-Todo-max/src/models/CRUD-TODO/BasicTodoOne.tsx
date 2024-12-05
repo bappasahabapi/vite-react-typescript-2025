@@ -14,34 +14,30 @@ const BasicTodoOne = () => {
   const [title, setTitle] = useState<string>("");
   const [editedTodoId, setEditedTodoId] = useState<number | null>(null);
 
- 
-
-  const addTodo =(title:string)=>{
+  const addTodo = (title: string) => {
     const newTodo: TodoOne = {
-        id: Date.now(),
-        title: title,
-      };
-      // console.log(newTodo)
-      setTodos([...todos, newTodo]);
-      setTitle("");
-  }
+      id: Date.now(),
+      title: title,
+    };
+    // console.log(newTodo)
+    setTodos([...todos, newTodo]);
+    setTitle("");
+  };
 
-  const updateTodo =(id:number, title:string)=>{
-    const newTodos =todos.map(todo=>{
-        if(todo.id ===id){
-            return {
-                ...todo,
-                title:title
-            }
-        }else{
-            return todo;
-        }
-
-    })
-    setTodos(newTodos)
+  const updateTodo = (id: number, title: string) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          title: title,
+        };
+      } else {
+        return todo;
+      }
+    });
+    setTodos(newTodos);
     setEditedTodoId(null);
-
-}
+  };
 
   const handleEdit = (todo: TodoOne) => {
     console.log(todo);
@@ -49,26 +45,21 @@ const BasicTodoOne = () => {
     setEditedTodoId(todo.id);
   };
 
-
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if(editedTodoId !==null){
-        updateTodo(editedTodoId,title)
-    }else{
-        addTodo(title)
+    if (editedTodoId !== null) {
+      updateTodo(editedTodoId, title);
+    } else {
+      addTodo(title);
     }
 
-    setTitle('')
-
+    setTitle("");
   };
 
   const handleDelete = (id: number) => {
     const deletedTodo = todos.filter((todo) => todo.id !== id);
     setTodos(deletedTodo);
   };
-
- 
 
   return (
     <div>

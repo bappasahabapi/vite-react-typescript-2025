@@ -41,6 +41,25 @@ const Todos = () => {
     }
   };
 
+
+  // another way
+
+//   const updateTodo_test = (id: number, title: string) => {
+//     const newTodos = todos.map((todo) => {
+//       if (todo.id === id) {
+//         return {
+//           ...todo,
+//           title: title,
+//         };
+//       } else {
+//         return todo;
+//       }
+//     });
+//     setTodos(newTodos);
+//     setEditId(null);
+//   };
+
+// ------------ 
   const handleEdit = (todo: Todo) => {
     setTitle(todo.title);
     setEditId(todo.id);
