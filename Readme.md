@@ -1,10 +1,13 @@
 # Vite React TypeScript Features Projects:
 - All Rights Reserved to [bappasaha.com](https://bappasaha.vercel.app/)
 
+##    Main Folders
 
-- [0-A-Redux-Works]()
-- [0-B-Vite-JavaScript-Works]()
-- [0-A-Redux-Works]()
+- [0-A-Redux-Works](https://github.com/bappasahabapi/vite-react-typescript-2025/tree/main/0-A-Redux-Works)
+- [0-B-Vite-JavaScript-Works](https://github.com/bappasahabapi/vite-react-typescript-2025/tree/main/0-B-Vite-JavaScript-Works)
+- [0-C-Vite-TypeScript-Works](https://github.com/bappasahabapi/vite-react-typescript-2025/tree/main/0-C-Vite-TypeScript-Works)
+- [0-D-Nextjs-Works](https://github.com/bappasahabapi/vite-react-typescript-2025/tree/main/0-D-Nextjs-Works)
+- [0-E-CSS-Works](https://github.com/bappasahabapi/vite-react-typescript-2025/tree/main/0-E-CSS-Works)
 
 ## 📗 Run the project
 <details>
